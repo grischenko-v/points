@@ -8,11 +8,12 @@
   canvas.addEventListener('click',createPoint , false);  
   //mass of points that were created
   var points = [];  
+  var currentColor;
   //get point center
   function createPoint(e){
     var x;
-    var y;
-    var currentColor = colors[Math.floor(Math.random() * (colors.length + 1))];   
+    var y;    
+    if(points.length != 1) currentColor = colors[Math.floor(Math.random() * (colors.length + 1))];   
     if(e.pageX || e.pageY) { 
       x = e.pageX;
       y = e.pageY;
